@@ -1,0 +1,303 @@
+
+.layer-form .layer-form-left {
+    width: 70px;
+    float: left;
+    margin-top: 20px;
+}
+
+.layer-form .layer-form-left h5 {
+    line-height: 32px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.layer-form .layer-form-left .msg-recive-area {
+    line-height: 22px;
+}
+
+.layer-form .layer-form-right {
+    width: 470px;
+    float: left;
+}
+
+.layer-form .layer-form-right .layer-form-reciver {
+    width: 100%;
+    float: left;
+    background: green;
+}
+
+.layer-form .layer-form-right input {
+    height: 30px;
+    width: 98px;
+    border: 1px solid #dedede;
+    outline: 0;
+    text-indent: 9px;
+    margin-top: 20px;
+}
+
+.layer-form .layer-form-right .msg-select {
+    height: 20px;
+    width: 380px;
+    margin-top: 20px;
+    float: left;
+}
+
+.layer-form .layer-form-right .msg-select select {
+    margin-right: 20px;
+    width: 98px;
+    height: 20px;
+    border: 1px solid #dedede;
+    outline: 0;
+    line-height: 20px;
+}
+
+.layer-form .layer-form-right .layer-form-detail-address {
+    width: 398px;
+    margin-top: 20px;
+}
+
+.layer-form .layer-form-right span {
+    color: #999;
+}
+
+.layer-form .layer-form-right .layer-form-default-adress {
+    width: 300px;
+    height: 20px;
+    float: left;
+    margin-top: 20px;
+}
+
+.layer-form .layer-form-right .layer-form-default-adress input {
+    width: 12px;
+    height: 12px;
+    float: left;
+}
+
+.layer-form .layer-form-right .layer-form-default-adress p {
+    color: #999;
+    line-height: 20px;
+    height: 20px;
+    float: left;
+}
+
+.layer-form .layer-form-button {
+    width: 300px;
+    height: 32px;
+    float: left;
+    margin-top: 20px;
+}
+
+.layer-form .layer-form-button button {
+    height: 32px;
+    width: 80px;
+    margin-right: 20px;
+    border-radius: 2px;
+    background: transparent;
+    color: #666;
+    outline: 0;
+    border: 1px solid #dedede;
+    float: left;
+}
+
+.layer-form .layer-form-button .layer-form-save {
+    background-color: #ff666b;
+    color: #fff;
+    height: 32px;
+    width: 80px;
+    margin-right: 20px;
+    border-radius: 2px;
+    display: inline-block;
+    float: left;
+    line-height: 32px;
+    text-align: center;
+}
+
+.layer-form .layui-layer-title {
+    border-bottom: 1px solid #dedede;
+    background-color: #f0f0f0;
+    height: 50px;
+    line-height: 50px;
+    font: bold 20px/2.5 'MicrosoftYaHeiUI Regular';
+    padding: 0 30px;
+}
+
+.layui-layer.layer-form .layui-layer-content {
+    padding: 0;
+}
+
+.layer-form {
+    width: 600px;
+    padding: 0 30px;
+}
+
+.layer-form .layui-layer-btn {
+    padding: 30px 0;
+}
+
+/*skin layer-alert*/
+.layer-alert .layui-layer-title {
+    padding: 40px 0 0;
+    height: auto;
+    border: none;
+    color: black;
+    text-align: center;
+    font: bold 20px/1 'MicrosoftYaHeiUI Regular';
+}
+
+.layer-alert .layui-layer-title h4 {
+    color: black;
+    text-align: center;
+    font: bold 20px/1 'MicrosoftYaHeiUI Regular';
+    margin-top: 30px;
+}
+
+.layui-layer.layer-alert .layui-layer-content {
+    padding: 0px 55px;
+}
+
+.layui-layer.layer-alert .layui-layer-content p {
+    color: rgb(153, 153, 153);
+    font: normal 14px/18px 'MicrosoftYaHeiUI Regular';
+    margin-top: 10px;
+}
+
+.layer-alert .layui-layer-btn {
+    text-align: center;
+    padding: 0 45px 35px;
+    margin-top: 20px;
+}
+
+.layer-alert .layui-layer-btn a {
+    font: normal 15px/36px 'MicrosoftYaHeiUI Regular';
+    height: 36px;
+    width: 130px;
+    color: #666666;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 0;
+    margin: 0;
+    transition: all .4s ease;
+}
+
+.layer-alert .layui-layer-btn a:last-of-type {
+    background-color: #e45050;
+    color: #ffffff;
+    border: 1px solid #e45050;
+}
+
+.layer-alert .layui-layer-btn a:hover {
+    color: #e45050;
+    border: 1px solid #e45050;
+}
+
+.layer-alert .layui-layer-btn a:last-of-type:hover {
+    background-color: #e97373;
+    border: 1px solid #e97373;
+    color: #ffffff;
+}
+
+.layer-alert .layui-layer-btn a+a {
+    margin-left: 20px;
+}
+
+/* skin   layer-login */
+.layer-login .layui-layer-title {
+    padding: 0 15px 0 25px;
+    height: 60px;
+    background-image: url(./images/title-bg.png);
+    background-repeat: no-repeat;
+    background-position: center -77px;
+    background-color: rgb(221,81,76);
+}
+
+.layer-login .layui-layer-title h4 {
+    font: bold 17px/60px 'MicrosoftYaHeiUI Regular';
+    color: #fff;
+}
+
+.layer-login .layui-layer-setwin .layui-layer-close1 {
+    background-position: -82px -37px;
+}
+
+.layer-login .layui-layer-setwin a {
+    height: 20px;
+    width: 20px;
+    margin-top: 6px;
+    border-radius: 50%;
+    color: black;
+}
+
+.layer-login .layui-layer-content{
+    padding: 0 15px 0 25px;
+    margin: 0;
+    height: auto;
+}
+
+.layer-login .login-content {
+    width: 310px;
+}
+
+.layer-login .login-content-input{
+    width: 310px;
+    height: 36px;
+    border: 1px solid #ccc;
+    margin-top: 18px;
+}
+
+.layer-login .login-content-input i{
+    height: 34px;
+    width: 53px;
+    border-right: 1px solid #ccc;
+    float: left;
+    background: #eee;
+    text-align: center;
+    line-height: 34px;
+}
+
+.layer-login .login-content-input input{
+    text-indent: 0.8em;
+    width: 255px;
+    height: 100%;
+    border: 0;
+    float: right;
+}
+
+.layer-login .am-form-group{
+    height: 20px;
+    margin-top: 30px;
+    /*margin-bottom: 20px;*/
+    position: relative;
+}
+
+.layer-login .am-checkbox{
+    padding: 0 15px 0 25px;
+    margin: 0;
+}
+
+.layer-login .layui-layer-btn{
+    text-align: center;
+    margin-right: 15px;
+    margin-left: 25px;
+    padding: 0;
+}
+
+.layer-login .layui-layer-btn a{
+    font: bold 15px/36px 'MicrosoftYaHeiUI Regular';
+    height: 38px;
+    width: 100%;
+    color: #fff;
+    line-height: 38px;
+    background-color: #dd514c;
+    border: none;
+    padding: 0;
+    margin: 0;
+    padding: 0 15px 0 25px;
+    transition: all .4s ease;
+}
+
+.layer-login .error-msg{
+    margin: 0;
+    background: #ccc;
+    color: #333;
+    line-height: 20px;
+}

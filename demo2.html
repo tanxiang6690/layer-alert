@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+    <link rel="stylesheet" href="layer/theme.css">
+</head>
+
+<body>
+    <button type="button" id="btn1">btn1</button>
+    <button type="button" id="btn2">btn2</button>
+    <button type="button" id="btn3">btn3</button>
+    <script src="jquery.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="layer/theme.js"></script>
+    <script>
+    $(function() {
+
+        $('#btn1').click(function() {
+            Msg('新的弹窗啊')
+        });
+        $('#btn2').click(function() {
+            Msg('新的弹窗啊2')
+        });
+        $('#btn3').click(function() {
+            Msg('新的弹窗啊3')
+        });
+
+        function Msg(content) {
+            var param = {
+                title: '默认标题',
+                hasIcon: true,
+                content: content
+            };
+            LayerAlert(param);
+        }
+    });
+    </script>
+</body>
+
+</html>

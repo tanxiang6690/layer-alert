@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/amazeui/2.7.2/css/amazeui.min.css">
+    <link rel="stylesheet" href="layer/theme.scss">
+</head>
+
+<body>
+    <div class="am-container">
+        <button class="am-btn am-btn-primary" type="button" id="test1">按钮1</button>
+        <button class="am-btn am-btn-primary" type="button" id="test2">按钮2</button>
+        <button class="am-btn am-btn-warning" type="button" id="test3">按钮3</button>
+        <button class="am-btn am-btn-warning" type="button" id="test4">按钮4</button>
+        <button class="am-btn am-btn-danger" type="button" id="test5">按钮5</button>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="avalon.mobile.js"></script>
+    <script src="layer/theme.js"></script>
+    <script>
+    $('#test1').on('click', function() {
+        var param = {
+            title: '上网一小时，休矣一下'
+        }
+        LayerAlert(param);
+    })
+
+    $('#test2').on('click', function() {
+        var param = {
+            hasIcon: true,
+            title: '成功关注',
+            content: '我是详细描述',
+            btn: '查看我的关注',
+            callback: function() {
+                layer.msg('我是回调');
+            }
+        }
+        LayerAlert(param);
+    })
+
+    $('#test3').on('click', function() {
+        var param = {
+            hasIcon: true,
+            title: '商品已加入购物车',
+            content: '我是详细描述但是看见俺看见的凉快圣诞节拉开',
+            btns: ['继续购物', '去购物车结算'],
+            callbacks: [
+                function() {
+                    layer.msg('我是回调1');
+                },
+                function() {
+                    layer.msg('我是回调2');
+                }
+            ]
+        }
+        LayerConfirm(param);
+    })
+
+    $('#test4').on('click', function() {
+        var param = {
+            title: '您确定要删除该产品吗？',
+            btns: ['取消', '删除'],
+            callbacks: [
+                function() {
+                    layer.msg('我取消了');
+                },
+                function() {
+                    layer.msg('我删除了');
+                }
+            ]
+        }
+        LayerConfirm(param);
+    })
+
+    $("#test5").on('click', function() {
+        var loginForm = Dom2Str(function() {
+            /*
+            <div class="login-content" ms-controller="login">
+                <form class="login-content" ms-validate="##validate">
+                    <p id="error-msg" class="am-form-group error-msg" ms-visible="##errMsg">{{##errMsg}}</p>
+                    <div class="login-content-input">
+                        <input type="text" id="user-name" placeHolder="邮箱/用户名/已验证手机" ms-duplex="##inputUser" ms-rules="{required:true}" data-required-message="请输入用户名！"><i class="am-icon-user am-icon-fw"></i></div>
+                    <div class="login-content-input">
+                        <input type="password" id="pass-word" ms-duplex="##inputPassWord" ms-rules="{required:true}" data-required-message="请输入密码！"><i class="am-icon-lock am-icon-fw"></i></div>
+                    <div class="am-form-group am-text-sm">
+                        <div class="am-checkbox am-fl">
+                            <label for="auto-login">
+                                <input type="checkbox" id="auto-login" />自动登录</label>
+                        </div>
+                        <div class="am-fr forget-link am-link-muted"><a href="javascript:;">忘记密码？</a></div>
+                    </div>
+                    <button type="submit" id="btn-submit" class="am-btn am-btn-danger am-btn-block">登录</button>
+                </form>
+            </div>
+            */
+        });
+
+        var param = {
+            title: '阿凡达AVATAR',
+            content: loginForm,
+            callback: function() {
+                var loginVm = avalon.define({
+                    $id: 'login',
+                    inputUser: '', //用户名
+                    inputPassWord: '', //密码
+                    errMsg: '', //信息提示
+                    validate: {
+                        onSuccess: function() {
+                            loginVm.errMsg = '';
+                        },
+                        onError: function(reasons) {
+                            loginVm.errMsg = reasons[0].getMessage();
+                        },
+                        onValidateAll: function(reasons) {
+                            if (reasons.length) {
+                                loginVm.errMsg = reasons[0].message;
+                            } else {
+                                console.log('提交成功');
+                            }
+                        }
+                    }
+                });
+                // 当弹窗移除时摧毁vm
+                loginVm.$watch('onDispose', function() {
+                    delete avalon.vmodels[loginVm.$id];
+                    if (avalon.scopes) {
+                        delete avalon.scopes[loginVm.$id]
+                    }
+                })
+                avalon.scan(document.body);
+            }
+        }
+        LayerForm(param);
+    })
+    </script>
+    koala,require js
+</body>
+
+</html>
